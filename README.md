@@ -40,7 +40,7 @@ END
 ``` sql
 CREATE procedure [dbo].[pr_KullaniciGuncelle]
 (
-	@KullaniciID			INT,
+	@KullaniciID				INT,
 	@Ad					NVARCHAR(50),
 	@Soyad					NVARCHAR(50),
 	@KullaniciAd				NVARCHAR(50),
