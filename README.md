@@ -25,15 +25,15 @@
 ``` sql
 CREATE PROCEDURE [dbo].[pr_KullaniciEkle]
 (
-	@Ad					NVARCHAR(50),
+	@Ad				NVARCHAR(50),
 	@Soyad				NVARCHAR(50),
-	@KullaniciAd		NVARCHAR(50),
+	@KullaniciAd			NVARCHAR(50),
 	@Email				NVARCHAR(50),
 	@Sifre				NVARCHAR(15)
 )
 AS
 BEGIN
-	INSERT INTO Kullanicilar(Ad, Soyad, KullaniciAd, Email, Sifre) VALUES(@Ad, @Soyad, @KullaniciAd, @Email, @Sifre);
+	INSERT INTO Kullanicilar(Ad, Soyad, KullaniciAd, Email, Sifre) VALUES(@Ad, @Soyad, @KullaniciAd, @Email, @Sifre)
 END
 ```
 
@@ -41,9 +41,9 @@ END
 CREATE procedure [dbo].[pr_KullaniciGuncelle]
 (
 	@KullaniciID			INT,
-	@Ad						NVARCHAR(50),
+	@Ad					NVARCHAR(50),
 	@Soyad					NVARCHAR(50),
-	@KullaniciAd			NVARCHAR(50),
+	@KullaniciAd				NVARCHAR(50),
 	@Email					NVARCHAR(50),
 	@Sifre					NVARCHAR(15)
 )
@@ -57,7 +57,7 @@ BEGIN
 	Email = @Email,
 	Sifre = @Sifre
 	WHERE @KullaniciID = @KullaniciID
-END;
+END
 ```
 
 ``` sql
@@ -75,6 +75,6 @@ CREATE PROCEDURE  [dbo].[pr_KullaniciSil]
 )
 AS
 BEGIN
-	DELETE FROM Kullanicilar WHERE KullaniciID = @KullaniciID;
-END;
+	DELETE FROM Kullanicilar WHERE KullaniciID = @KullaniciID
+END
 ```
